@@ -1,0 +1,265 @@
+/* ----------------------------------------------------------- FONTS */
+@font-face {
+  font-family: "roboto";
+  src: url("/fonts/roboto-bold-webfont.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "roboto";
+  src: url("/fonts/roboto-bolditalic-webfont.woff2") format("woff2");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "roboto";
+  src: url("/fonts/roboto-italic-webfont.woff2") format("woff2");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "roboto";
+  src: url("/fonts/roboto-regular-webfont.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+/* ----------------------------------------------------------- VARIABLES */
+:root {
+  /* COLORS */
+  --main-bg-color: #f4f3ea;
+  --main-bg-light-color: white;
+  --main-bg-dark-color: #e5e4d9;
+  --main-bg-footer-color: #dfded0;
+  --main-nav-button-bg-color: rgb(174, 171, 140);
+  --main-nav-button-bg-gradient: linear-gradient(
+    90deg,
+    rgba(174, 171, 140, 1) 0%,
+    rgba(157, 135, 126, 1) 100%
+  );
+  --main-nav-button-bg-wood: url("./images/button.bg.wood.png");
+
+  --theboattrip-bg-color: #f4f3ea;
+
+  --havsaventyret-bg-color: #f4f3ea;
+  /* SIZES */
+  --wrap-whole-page-size: 75rem;
+  --wrap-inner-content-size: 62rem;
+  --wrap-text-column: 40rem;
+  --wrap-text-column-wide: 47rem;
+}
+/* ----------------------------------------------------------- BODY */
+body {
+  font-family: "roboto", sans-serif;
+  background-color: var(--main-bg-color);
+  margin: 0;
+  padding: 0;
+}
+/* ----------------------------------------------------------- WRAPPERS */
+.wrap-whole-page {
+  max-width: var(--wrap-whole-page-size);
+  margin: 0 auto;
+  padding: 0;
+}
+.wrap-inner-content {
+  max-width: var(--wrap-inner-content-size);
+}
+.wrap-text-column {
+  max-width: var(--wrap-text-column);
+}
+.wrap-text-column-wide {
+  max-width: var(--wrap-text-column-wide);
+}
+/* COLORS */
+.wrap-main-bg-color {
+  background-color: var(--main-bg-color);
+}
+.wrap-main-bg-light-color {
+  background-color: var(--main-bg-light-color);
+}
+.wrap-main-bg-dark-color {
+  background-color: var(--main-bg-dark-color);
+}
+.wrap-main-bg-footer-color {
+  background-color: var(--main-bg-footer-color);
+}
+/* ----------------------------------------------------------- ADJUSTMENTS */
+.jump1 {
+  margin-top: -1rem;
+}
+/* ----------------------------------------------------------- LOGO */
+#logo {
+  padding-left: 5rem;
+  padding-top: 1rem;
+}
+#logo img {
+  width: 26rem;
+}
+/* ----------------------------------------------------------- MAIN NAV */
+#nav-main {
+  width: 12rem;
+  right: 0rem;
+  position: fixed;
+  z-index: 10;
+}
+#nav-main ul {
+  list-style: none;
+  padding-left: 0;
+}
+#nav-main li {
+  background: var(--main-nav-button-bg-color);
+  background: var(--main-nav-button-bg-gradient);
+  box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.5);
+  border-radius: 1rem 0rem 0rem 1rem;
+  height: 3.5rem;
+  margin-bottom: 0.6rem;
+}
+#login-button a,
+#nav-main li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 0.9rem 1.2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-shadow: rgba(0, 0, 0, 0.3) 0 0 0.5rem;
+}
+#login-button {
+  background: var(--main-nav-button-bg-color);
+  background: var(--main-nav-button-bg-gradient);
+  box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.5);
+  border-radius: 0rem 0rem 1rem 1rem;
+  width: 13rem;
+  height: 3.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  padding-left: 0px !important;
+  position: absolute;
+  top: 0px;
+  left: 70%;
+}
+#order-button {
+  background: var(--main-nav-button-bg-wood) !important;
+  background-size: 100% 100% !important;
+}
+/* ----------------------------------------------------------- FOOTER */
+footer article {
+  display: grid;
+  grid-template-columns: 3fr 2fr 2fr;
+  padding: 2rem 0rem !important;
+}
+#footer-logo {
+  text-align: center;
+  padding-top: 0.5rem;
+}
+#footer-logo img {
+  width: 20rem;
+}
+@media (max-width: 60rem) {
+  footer article {
+    grid-template-columns: 1fr;
+    margin-left: 10rem;
+  }
+  #footer-logo > div:nth-child(1) {
+    margin-left: -10rem;
+  }
+}
+/* ----------------------------------------------------------- MAPPIA INDEX */
+article.product-logo-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 60rem;
+  padding: 0rem 0rem;
+  align-items: center;
+  justify-items: center;
+}
+
+article.product-logo-buttons img {
+  width: 19rem;
+}
+
+section.landingpage-fourgroup {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+section.landingpage-fourgroup div.card {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 1rem;
+  align-items: center;
+}
+
+section.landingpage-fourgroup img {
+  width: 115px;
+  height: 115px;
+}
+/* --- AKTUELLT ----------------------------------------------------------------------- */
+
+section.aktuellt {
+  display: grid;
+  grid-template-columns: repeat(3, 19rem);
+  gap: 1rem 2rem;
+  margin-left: -1rem;
+}
+
+section.aktuellt div.card {
+  padding: 1rem;
+  background-color: white;
+}
+
+section.aktuellt img {
+  width: 18rem;
+  height: 18rem;
+}
+
+section.aktuellt h3 {
+  padding-bottom: 0rem;
+  margin-bottom: 0rem;
+}
+
+section.aktuellt p {
+  padding-top: 0rem;
+  margin-top: 0rem;
+}
+/* ----------------------------------------------------------- SAGT OM OSS */
+div.sagtomoss {
+  background-color: var(--main-bg-dark-color);
+  padding-bottom: 2rem;
+  padding-top: 1rem;
+}
+
+section.sagtomoss h3,
+.omoss h3 {
+  font-size: 1.5rem;
+}
+
+section.sagtomoss div.card {
+  display: grid;
+  grid-template-columns: 4fr 2fr;
+  padding: 1rem;
+  gap: 2rem;
+  align-items: center;
+}
+
+section.sagtomoss img {
+  width: 13rem;
+  height: 13rem;
+  /* padding-top: 2rem; */
+}
+/* --- PRATBUBBLOR ----------------------------------------------------------------------- */
+.pratbubblor {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 3rem;
+}
+.pratbubblor .card {
+  background-color: white;
+  border-radius: 4rem;
+  padding: 2rem;
+  margin-bottom: 3rem;
+}
